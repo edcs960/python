@@ -1,0 +1,10 @@
+place = input("경기장은 어디입니까? ")
+winteam = input("이긴 팀은 어디입니까? ")
+loseteam = input("진 팀은 어디입니까? ")
+mvpplayer = input("우수 선수는 누구입니까? ")
+score = input("점수는 몇대몇 입니까? ")
+
+print("오늘 ", place, "에서 야구 경기가 열렸습니다.")
+print(winteam, "와", loseteam,"는 치열한 공방전을 펼쳤습니다.")
+print(mvpplayer, "가 맹활약을 하였습니다.")
+print("결국", winteam, "가", loseteam,"를", score,"로 이겼습니다.")
