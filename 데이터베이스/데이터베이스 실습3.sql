@@ -24,10 +24,13 @@ DROP VIEW V_SUP10
 DROP VIEW V_SUP11
 
 -- 합산 VIEW 테이블
+-- UNION ALL(하나의 테이블이용)
 CREATE VIEW V_SALE_MONTH
 AS
 SELECT 1 AS Q_M, SUM(M_SALE) AS M_SALE_M FROM T_SALE WHERE D_SALE >= '2020-01-01' AND D_SALE <= '2020-1-31'
-UNION ALL -- 여러개의 SELECT문에서 집계합수를 이용하여 조회를 할때 UNION ALL을 사용하면 SELECT문을 함쳐서 보여준다.
+-- 여러개의 SELECT문에서 집계합수를 이용하여 조회를 할때 UNION ALL을 사용하면 SELECT문을 함쳐서 보여준다.
+-- 여러개의 SELECT문의 칼럼수가 같아야된다.
+UNION ALL 
 SELECT 2 AS Q_M, SUM(M_SALE) FROM T_SALE WHERE D_SALE >= '2020-02-01' AND D_SALE <= '2020-2-29'
 
 -- VIEW 테이블 조회
